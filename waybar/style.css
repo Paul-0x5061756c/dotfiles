@@ -9,17 +9,13 @@
 
 window#waybar {
     background: transparent;
-    background-color: @crust;
     color: @overlay0;
-    transition-property: background-color;
-    transition-duration: 0.1s;
-    border-bottom: 1px solid @overlay1;
 }
 
 #window {
     margin: 8px;
-    padding-left: 8;
-    padding-right: 8;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 button {
@@ -34,6 +30,14 @@ button:hover {
     border-top: 2px solid @mauve;
 }
 
+.modules-left, .modules-center, .modules-right {
+  margin: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: @surface1;
+  border-radius: 8px;
+}
+
 #workspaces button {
     padding: 0 4px;
 }
@@ -45,89 +49,123 @@ button:hover {
 }
 
 #workspaces button.active {
-    background-color: rgba(0, 0, 0, 0.3);
-    color: @mauve;
-    border-top: 2px solid @mauve;
-}
-
-#workspaces button.urgent {
-    background-color: #eb4d4b;
-}
-
-#pulseaudio,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#wireplumber,
-#tray,
-#network,
-#mode,
-#scratchpad,
-#custom-memory,
-#custom-openvpn {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
-}
-
-#clock.date {
     color: @mauve;
     border-bottom: 2px solid @mauve;
 }
 
-#pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
-}
+  #workspaces button.urgent {
+      background-color: #eb4d4b;
+  }
 
-#network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
-}
+  #custom-pipewire,
+  #clock,
+  #battery,
+  #cpu,
+  #memory,
+  #disk,
+  #temperature,
+  #backlight,
+  #wireplumber,
+  #tray,
+  #network,
+  #mode,
+  #scratchpad,
+  #custom-media,
+  #custom-memory,
+  #custom-launch-brave,
+  #custom-launch-firefox,
+  #custom-hyprshot,
+  #custom-launch-terminal,
+  #custom-launch-spotify,
+  #custom-openvpn {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
 
-#idle_inhibitor {
-    margin-right: 12px;
-    color: #7cb342;
-}
+  #clock {
+      color: @maroon;
+      border-bottom: 2px solid @maroon;
+  }
 
-#idle_inhibitor.activated {
-    color: @red;
-}
+  #clock.date {
+      color: @mauve;
+      border-bottom: 2px solid @mauve;
+  }
 
-#battery {
-    color: @green;
-    border-bottom: 2px solid @green;
-}
+  #custom-pipewire {
+      color: @blue;
+      border-bottom: 2px solid @blue;
+  }
 
-/* Custom memory module style */
-#custom-memory {
-    color: @pink;
-    border-bottom: 2px solid @pink;
-}
+  #network {
+      color: @yellow;
+      border-bottom: 2px solid @yellow;
+  }
 
-/* Custom VPN module style */
-#custom-openvpn.vpn-on {
-    color: @lavender;
-    border-bottom: 2px solid @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
+  #idle_inhibitor {
+      margin-right: 12px;
+      color: #7cb342;
+  }
+
+  #idle_inhibitor.activated {
+      color: @red;
+  }
+
+  #battery {
+      color: @green;
+      border-bottom: 2px solid @green;
+  }
+
+  #custom-memory {
+      color: @pink;
+      border-bottom: 2px solid @pink;
+  }
+
+  #custom-launch-spotify {
+      color: @green;
+      border-bottom: 2px solid @green;
+  }
+
+  #custom-launch-brave {
+      color: @blue;
+      border-bottom: 2px solid @blue;
+  }
+  #custom-launch-firefox {
+      color: @red;
+      border-bottom: 2px solid @red;
+  }
+
+  #custom-launch-terminal {
+      color: @yellow;
+      border-bottom: 2px solid @yellow;
+  }
+
+  #custom-hyprshot {
+      color: @orange;
+      border-bottom: 2px solid @orange;
+  }
+
+  #custom-media {
+      color: @lavender;
+      border-bottom: 2px solid @lavender;
+  }
+
+
+  #custom-openvpn.vpn-on {
+      color: @lavender;
+      border-bottom: 2px solid @lavender;
+      padding-left: 6px;
+      padding-right: 6px;
 }
 
 #custom-openvpn.vpn-off {
-    color: @surface1;
-    border-bott
+    color: @surface2;
+    border-bottom: 2px solid @surface1;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 

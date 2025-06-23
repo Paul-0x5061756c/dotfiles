@@ -2,18 +2,17 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces", "custom/media"],
   "modules-center": ["custom/launch-brave", "custom/launch-terminal", "custom/launch-firefox", "custom/hyprshot", "custom/launch-spotify"],
-  "modules-right": ["custom/openvpn", "custom/memory","pulseaudio","clock"],
+  "modules-right": ["custom/openvpn", "custom/memory","custom/pipewire","clock"],
   "clock": {
     "format": "<span foreground='#f5c2e7'>   </span>{:%a %d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
-    "format-muted": "",
-    "format-icons": {
-      "default": [""," "]
-    },
-    "on-click": "pavucontrol"
+  "custom/pipewire": {
+    "format": " {text} ",
+    "exec": "~/.config/waybar/scripts/pipewire-status.sh",
+    "interval": 5,
+    "return-type": "json",
+    "on-click": "pavucontrol",
   },
   "custom/openvpn": {
     "exec": "~/.config/waybar/scripts/openvpn_status.sh",
@@ -69,7 +68,7 @@
     "tooltip-format": "Launch Firefox",
   },
   "custom/media": {
-    "exec": "playerctl metadata --format '   {{artist}} - {{title}}'",
+    "exec": "~/.config/waybar/scripts/media-status.sh",
     "interval": 3,
     "return-type": "text",
     "format": "{}    "
