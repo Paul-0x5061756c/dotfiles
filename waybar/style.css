@@ -9,15 +9,17 @@
 
 window#waybar {
     background: transparent;
+    background-color: @crust;
     color: @overlay0;
     transition-property: background-color;
     transition-duration: 0.1s;
+    border-bottom: 1px solid @overlay1;
 }
 
 #window {
     margin: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 8;
+    padding-right: 8;
 }
 
 button {
@@ -61,18 +63,12 @@ button:hover {
 #temperature,
 #backlight,
 #wireplumber,
-#custom-vpn,
-#custom-memory,
-#custom-launch-terminal,
-#custom-launch-brave,
-#custom-launch-firefox,
-#custom-launch-spotify,
-#custom-media,
 #tray,
 #network,
 #mode,
-#custom-hyprshot,
-#scratchpad {
+#scratchpad,
+#custom-memory,
+#custom-openvpn {
   margin-top: 2px;
   margin-bottom: 2px;
   margin-left: 4px;
@@ -80,55 +76,6 @@ button:hover {
   padding-left: 4px;
   padding-right: 4px;
 }
-
-#custom-memory {
-    color: @pink;
-    border-bottom: 2px solid @pink;
-}
-
-#custom-hyprshot {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
-}
-
-#custom-launch-terminal{
-    color: @blue;
-    border-bottom: 2px solid @blue;
-}
-#custom-launch-brave{
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
-}
-#custom-launch-firefox{
-    color: @red;
-    border-bottom: 2px solid @red;
-}
-#custom-launch-spotify{
-    color: @green;
-    border-bottom: 2px solid @green;
-}
-#custom-media{
-    color: @lavender;
-    border-bottom: 2px solid @lavender;
-}
-
-
-#custom-openvpn.vpn-on {
-    color: @lavender;
-    border-bottom: 2px solid @lavender;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 15px 15px 0 0;
-}
-
-#custom-openvpn.vpn-off {
-    color: @surface1;
-    border-bottom: 2px solid @surface1;
-    padding-left: 6px;
-    padding-right: 6px;
-    border-radius: 15px 15px 0 0; 
-}
-
 
 #clock {
     color: @maroon;
@@ -164,37 +111,23 @@ button:hover {
     border-bottom: 2px solid @green;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
+/* Custom memory module style */
+#custom-memory {
+    color: @pink;
+    border-bottom: 2px solid @pink;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
-}
-
-.modules-left, .modules-center, .modules-right {
-  border-radius: 15px;
-  background: @mantle;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  margin-top: 8px;
-}
-
-.modules-left {
-  margin-left: 8px;
-}
-
-.modules-right {
-  margin-right: 8px;
-}
-
-#custom-vpn {
+/* Custom VPN module style */
+#custom-openvpn.vpn-on {
     color: @lavender;
+    border-bottom: 2px solid @lavender;
     border-radius: 15px;
     padding-left: 6px;
     padding-right: 6px;
 }
+
+#custom-openvpn.vpn-off {
+    color: @surface1;
+    border-bott
+}
+
